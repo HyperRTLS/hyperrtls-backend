@@ -644,7 +644,7 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@nestjs/class-transformer@^0.4.0":
+"@nestjs/class-transformer@0.4.0":
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@nestjs/class-transformer/-/class-transformer-0.4.0.tgz#37e4b5f7ed019345079774ebfb1ace614f2b6221"
   integrity sha512-aHKhqPVixFCo8m7n2iP1uGgfyF0eYlAgGJKfW27l0BvRCTPBjmoL4956Cf9xVu6WNJzVsp//SOcpIavdnNHYZg==
