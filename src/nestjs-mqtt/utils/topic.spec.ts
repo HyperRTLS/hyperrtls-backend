@@ -104,7 +104,15 @@ describe('createTopicParser', () => {
 });
 
 describe('getMinimalPatternSubset', () => {
-  it('should extract minimal pattern subset', () => {
+  it('should correctly handle empty pattern array', () => {
+    expect(getMinimalPatternSubset([])).toEqual([]);
+  });
+
+  it('should correctly handle not unique patterns', () => {
+    expect(getMinimalPatternSubset(['#', '#'])).toEqual(['#']);
+  });
+
+  it('should correctly extract minimal pattern subset', () => {
     expect(
       getMinimalPatternSubset([
         'part1/part2/part3',

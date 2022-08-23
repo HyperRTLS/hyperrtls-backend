@@ -74,12 +74,20 @@ export function createTopicParser(pattern: string) {
 }
 
 export function getMinimalPatternSubset(patterns: string[]): string[] {
-  const patternMatchers = patterns.map(createPatternMatcher);
-  return patterns.filter(
-    (pattern, patternIdx) =>
-      !patternMatchers.some((patternMatcher, matcherIdx) => {
-        if (patternIdx === matcherIdx) return false;
-        return patternMatcher(pattern);
-      }),
-  );
+  const compareFn = (toCompare: string) => (toCompareAgainst: string) =>
+    createPatternMatcher(toCompareAgainst)(toCompare);
+
+  return patterns.reduce<string[]>((minimalPatternSubset, pattern, idx) => {
+    const compareAgainst = [
+      ...minimalPatternSubset,
+      ...patterns.slice(idx + 1),
+    ];
+
+    // .some() === false mimics .none() behaviour
+    if (compareAgainst.some(compareFn(pattern)) === false) {
+      minimalPatternSubset.push(pattern);
+    }
+
+    return minimalPatternSubset;
+  }, []);
 }

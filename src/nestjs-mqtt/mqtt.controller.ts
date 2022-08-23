@@ -28,8 +28,8 @@ import {
   ParsedTopic,
   createPatternMatcher,
   createTopicParser,
-  // getMinimalPatternSubset,
-  // transformPatternToSubscriptionTopic,
+  getMinimalPatternSubset,
+  transformPatternToSubscriptionTopic,
 } from './utils/topic';
 
 export interface MessageHandler {
@@ -138,12 +138,10 @@ export class MqttController {
         });
     });
 
-    // TODO: Fix in https://github.com/sszczep/UWB-Indoor-Positioning-System/issues/18
-    this.client.subscribe('#');
-    // getMinimalPatternSubset(
-    //   this.messageHandlers.map((handler) => handler.pattern),
-    // )
-    //   .map(transformPatternToSubscriptionTopic)
-    //   .forEach((topic) => this.client.subscribe(topic));
+    getMinimalPatternSubset(
+      this.messageHandlers.map((handler) => handler.pattern),
+    )
+      .map(transformPatternToSubscriptionTopic)
+      .forEach((topic) => this.client.subscribe(topic));
   }
 }
