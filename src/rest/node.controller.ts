@@ -5,8 +5,6 @@ import { RestNodeService } from './node.service';
 const parseArrayPipe = new ParseArrayPipe({
   separator: ',',
   optional: true,
-  validatorPackage: require('@nestjs/class-validator'),
-  transformerPackage: require('@nestjs/class-transformer'),
 });
 
 @Controller('nodes')
