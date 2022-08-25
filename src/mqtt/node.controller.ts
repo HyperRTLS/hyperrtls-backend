@@ -1,4 +1,5 @@
-import { IsNumber } from '@nestjs/class-validator';
+import { IsNumber } from 'class-validator';
+
 import { Controller, UsePipes } from '@nestjs/common';
 
 import {
@@ -24,12 +25,7 @@ export class NodeLocationPayload {
 
 @Controller()
 @MqttGateway('nodes')
-@UsePipes(
-  new MqttValidationPipe({
-    transformerPackage: require('@nestjs/class-transformer'),
-    validatorPackage: require('@nestjs/class-validator'),
-  }),
-)
+@UsePipes(new MqttValidationPipe())
 export class MqttNodeController {
   constructor(private readonly mqttNodeService: MqttNodeService) {}
 
