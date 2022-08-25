@@ -4,30 +4,45 @@ import {
   PipeTransform,
   Type,
 } from '@nestjs/common';
-import { ClassTransformOptions, plainToClass } from '@nestjs/class-transformer';
-import {
-  validate,
-  ValidationError,
-  ValidatorOptions,
-} from '@nestjs/class-validator';
+import { ValidatorPackage } from '@nestjs/common/interfaces/external/validator-package.interface';
+import { TransformerPackage } from '@nestjs/common/interfaces/external/transformer-package.interface';
+import { ClassTransformOptions } from '@nestjs/common/interfaces/external/class-transform-options.interface';
+import { ValidatorOptions } from '@nestjs/common/interfaces/external/validator-options.interface';
+import { ValidationError } from '@nestjs/common/interfaces/external/validation-error.interface';
+import { loadPackage } from '@nestjs/common/utils/load-package.util';
 
 export interface MqttValidationPipeOptions {
   validatorOptions?: ValidatorOptions;
   transformOptions?: ClassTransformOptions;
   exceptionFactory?: (errors: ValidationError[]) => any;
+  validatorPackage?: ValidatorPackage;
+  transformerPackage?: TransformerPackage;
 }
 
 export class MqttValidationPipe implements PipeTransform<any> {
   private readonly validatorOptions?: ValidatorOptions;
   private readonly transformOptions?: ClassTransformOptions;
   private readonly exceptionFactory: (errors: ValidationError[]) => any;
+  private readonly validatorPackage: ValidatorPackage;
+  private readonly transformerPackage: TransformerPackage;
 
   constructor(readonly options: MqttValidationPipeOptions = {}) {
-    const { validatorOptions, transformOptions, exceptionFactory } = options;
+    const {
+      validatorOptions,
+      transformOptions,
+      exceptionFactory,
+      validatorPackage,
+      transformerPackage,
+    } = options;
 
     this.validatorOptions = validatorOptions;
     this.transformOptions = transformOptions;
     this.exceptionFactory = exceptionFactory || this.createExceptionFactory();
+    this.validatorPackage =
+      validatorPackage ?? loadPackage('class-validator', 'MqttValidationPipe');
+    this.transformerPackage =
+      transformerPackage ??
+      loadPackage('class-transformer', 'MqttValidationPipe');
   }
 
   public async transform(value: unknown, metadata: ArgumentMetadata) {
@@ -54,7 +69,7 @@ export class MqttValidationPipe implements PipeTransform<any> {
     }
 
     const toTransform = this.tryParseJSON(value);
-    const transformed = plainToClass(
+    const transformed = this.transformerPackage.plainToClass(
       metatype,
       toTransform,
       this.transformOptions,
@@ -74,7 +89,10 @@ export class MqttValidationPipe implements PipeTransform<any> {
       }
     }
 
-    const validationErrors = await validate(toValidate, this.validatorOptions);
+    const validationErrors = await this.validatorPackage.validate(
+      toValidate,
+      this.validatorOptions,
+    );
     if (validationErrors.length > 0) {
       throw await this.exceptionFactory(validationErrors);
     }

@@ -24,7 +24,12 @@ export class NodeLocationPayload {
 
 @Controller()
 @MqttGateway('nodes')
-@UsePipes(new MqttValidationPipe())
+@UsePipes(
+  new MqttValidationPipe({
+    transformerPackage: require('@nestjs/class-transformer'),
+    validatorPackage: require('@nestjs/class-validator'),
+  }),
+)
 export class MqttNodeController {
   constructor(private readonly mqttNodeService: MqttNodeService) {}
 
