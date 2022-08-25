@@ -1,0 +1,27 @@
+name: Node.js CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ 'development', 'main' ]
+  pull_request:
+    branches: [ 'development', 'main' ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - name: Setup Node with dependency caching
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+        cache: 'yarn'
+    - name: Install dependencies
+      run: yarn --frozen-lockfile
+    - name: Run test suites
+      run: yarn test
+    - name: Build the project
+      run: yarn build
