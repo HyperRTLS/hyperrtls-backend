@@ -96,7 +96,11 @@ export class MqttController {
         this.mqttSubscriberParamsFactory,
         undefined,
         undefined,
-        undefined,
+        {
+          filters: this.config.enableFilters,
+          guards: this.config.enableGuards,
+          interceptors: this.config.enableInterceptors,
+        },
         'mqtt',
       );
 

@@ -9,6 +9,9 @@ export interface MqttGatewayModuleConfig {
   clientConfig?: IClientOptions;
   discoverControllers?: boolean;
   suppressRoutesErrors?: boolean;
+  enableFilters?: boolean;
+  enableGuards?: boolean;
+  enableInterceptors?: boolean;
 }
 
 export const { ConfigurableModuleClass } =
