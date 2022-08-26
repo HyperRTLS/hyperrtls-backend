@@ -28,8 +28,8 @@ import {
   ParsedTopic,
   createPatternMatcher,
   createTopicParser,
-  // getMinimalPatternSubset,
-  // transformPatternToSubscriptionTopic,
+  getMinimalPatternSubset,
+  transformPatternToSubscriptionTopic,
 } from './utils/topic';
 
 export interface MessageHandler {
@@ -96,7 +96,11 @@ export class MqttController {
         this.mqttSubscriberParamsFactory,
         undefined,
         undefined,
-        undefined,
+        {
+          filters: this.config.enableFilters,
+          guards: this.config.enableGuards,
+          interceptors: this.config.enableInterceptors,
+        },
         'mqtt',
       );
 
@@ -134,16 +138,16 @@ export class MqttController {
         .filter(({ patternMatcher }) => patternMatcher(topic))
         .forEach(({ callback, topicParser }) => {
           const parsedTopic = topicParser(topic);
-          callback(this.client, parsedTopic, payload, packet);
+          callback(this.client, parsedTopic, payload, packet).catch((err) => {
+            if (!this.config.suppressRoutesErrors) throw err;
+          });
         });
     });
 
-    // TODO: Fix in https://github.com/sszczep/UWB-Indoor-Positioning-System/issues/18
-    this.client.subscribe('#');
-    // getMinimalPatternSubset(
-    //   this.messageHandlers.map((handler) => handler.pattern),
-    // )
-    //   .map(transformPatternToSubscriptionTopic)
-    //   .forEach((topic) => this.client.subscribe(topic));
+    getMinimalPatternSubset(
+      this.messageHandlers.map((handler) => handler.pattern),
+    )
+      .map(transformPatternToSubscriptionTopic)
+      .forEach((topic) => this.client.subscribe(topic));
   }
 }

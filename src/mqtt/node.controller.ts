@@ -1,4 +1,5 @@
-import { IsNumber } from '@nestjs/class-validator';
+import { IsNumber } from 'class-validator';
+
 import { Controller, UsePipes } from '@nestjs/common';
 
 import {
