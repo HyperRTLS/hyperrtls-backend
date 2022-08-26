@@ -56,6 +56,7 @@ const env = process.env.NODE_ENV || 'development';
           password: configService.get('MQTT_BROKER_PASSWORD'),
         },
         discoverControllers: true,
+        suppressRoutesErrors: true,
       }),
       inject: [ConfigService],
     }),

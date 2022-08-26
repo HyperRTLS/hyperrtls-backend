@@ -134,7 +134,9 @@ export class MqttController {
         .filter(({ patternMatcher }) => patternMatcher(topic))
         .forEach(({ callback, topicParser }) => {
           const parsedTopic = topicParser(topic);
-          callback(this.client, parsedTopic, payload, packet);
+          callback(this.client, parsedTopic, payload, packet).catch((err) => {
+            if (!this.config.suppressRoutesErrors) throw err;
+          });
         });
     });
 
