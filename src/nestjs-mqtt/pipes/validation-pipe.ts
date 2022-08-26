@@ -11,6 +11,17 @@ import { ValidatorOptions } from '@nestjs/common/interfaces/external/validator-o
 import { ValidationError } from '@nestjs/common/interfaces/external/validation-error.interface';
 import { loadPackage } from '@nestjs/common/utils/load-package.util';
 
+export class MqttValidationError extends Error {
+  constructor(readonly errors: ValidationError[]) {
+    const errorsMessage = errors.join('');
+    const message = `Found following errors during validation:\n${errorsMessage}`;
+
+    super(message);
+
+    this.name = 'MqttValidationError';
+  }
+}
+
 export interface MqttValidationPipeOptions {
   validatorOptions?: ValidatorOptions;
   transformOptions?: ClassTransformOptions;
@@ -37,7 +48,7 @@ export class MqttValidationPipe implements PipeTransform<any> {
 
     this.validatorOptions = validatorOptions;
     this.transformOptions = transformOptions;
-    this.exceptionFactory = exceptionFactory || this.createExceptionFactory();
+    this.exceptionFactory = exceptionFactory ?? this.createExceptionFactory();
     this.validatorPackage =
       validatorPackage ?? loadPackage('class-validator', 'MqttValidationPipe');
     this.transformerPackage =
@@ -94,7 +105,7 @@ export class MqttValidationPipe implements PipeTransform<any> {
       this.validatorOptions,
     );
     if (validationErrors.length > 0) {
-      throw await this.exceptionFactory(validationErrors);
+      throw this.exceptionFactory(validationErrors);
     }
 
     return transformed;
@@ -102,9 +113,7 @@ export class MqttValidationPipe implements PipeTransform<any> {
 
   private createExceptionFactory() {
     return (validationErrors: ValidationError[] = []) => {
-      // TODO
-      console.log(validationErrors);
-      return new Error();
+      return new MqttValidationError(validationErrors);
     };
   }
 
