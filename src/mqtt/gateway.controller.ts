@@ -1,6 +1,6 @@
 import { Controller } from '@nestjs/common';
 
-import { MqttGateway } from 'src/nestjs-mqtt';
+import { MqttGateway } from '../nestjs-mqtt';
 
 import { MqttGatewayService } from './gateway.service';
 

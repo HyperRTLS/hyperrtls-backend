@@ -2,8 +2,8 @@ import * as si from 'systeminformation';
 
 import { Injectable } from '@nestjs/common';
 
-import { DynamicSecurityService } from 'src/nestjs-dynsec/dynsec.service';
-import { PrismaService } from 'src/prisma.service';
+import { DynamicSecurityService } from '../nestjs-dynsec/dynsec.service';
+import { PrismaService } from '../prisma.service';
 
 @Injectable()
 export class RestSystemService {

@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 
-import { DynamicSecurityService } from 'src/nestjs-dynsec/dynsec.service';
+import { DynamicSecurityService } from '../nestjs-dynsec/dynsec.service';
 
 @Injectable()
 export class RestDynamicSecurityService {

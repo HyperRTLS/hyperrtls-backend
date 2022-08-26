@@ -8,7 +8,7 @@ import {
   MqttSubscribe,
   Payload,
   Topic,
-} from 'src/nestjs-mqtt';
+} from '../nestjs-mqtt';
 
 import { MqttNodeService } from './node.service';
 
