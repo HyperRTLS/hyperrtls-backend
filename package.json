@@ -20,22 +20,19 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "class-transformer": "npm:@nestjs/class-transformer@0.4.0",
-    "class-validator": "npm:@nestjs/class-validator@0.13.4",
     "@nestjs/common": "9.0.11",
     "@nestjs/config": "2.2.0",
     "@nestjs/core": "9.0.11",
     "@nestjs/platform-express": "9.0.11",
-    "@prisma/client": "4.2.1",
+    "class-transformer": "npm:@nestjs/class-transformer@0.4.0",
+    "class-validator": "npm:@nestjs/class-validator@0.13.4",
     "iterare": "1.2.1",
     "mqtt": "4.3.7",
-    "nest-winston": "1.7.0",
     "reflect-metadata": "0.1.13",
     "rimraf": "3.0.2",
     "rxjs": "7.5.6",
     "systeminformation": "5.12.6",
-    "uuid": "8.3.2",
-    "winston": "3.8.1"
+    "uuid": "8.3.2"
   },
   "devDependencies": {
     "@nestjs/cli": "9.1.1",
@@ -53,14 +50,13 @@
     "eslint-plugin-prettier": "4.2.1",
     "jest": "29.0.1",
     "prettier": "2.7.1",
-    "prisma": "4.2.1",
     "source-map-support": "0.5.21",
     "supertest": "6.2.4",
     "ts-jest": "28.0.8",
     "ts-loader": "9.3.1",
     "ts-node": "10.9.1",
     "tsconfig-paths": "4.1.0",
-    "typescript": "4.8.2"
+    "typescript": "4.7.4"
   },
   "jest": {
     "moduleFileExtensions": [

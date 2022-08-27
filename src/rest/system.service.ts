@@ -3,20 +3,15 @@ import * as si from 'systeminformation';
 import { Injectable } from '@nestjs/common';
 
 import { DynamicSecurityService } from '../nestjs-dynsec/dynsec.service';
-import { PrismaService } from '../prisma.service';
 
 @Injectable()
 export class RestSystemService {
-  constructor(
-    private readonly dynsecService: DynamicSecurityService,
-    private readonly prismaService: PrismaService,
-  ) {}
+  constructor(private readonly dynsecService: DynamicSecurityService) {}
 
   async getSystemHealth() {
     const dynsec = this.dynsecService.isConnected();
     const gateway = true; // TODO
-    const prisma = await this.prismaService.isHealthy();
-    return { dynsec, gateway, prisma };
+    return { dynsec, gateway };
   }
 
   async getSystemInfo() {

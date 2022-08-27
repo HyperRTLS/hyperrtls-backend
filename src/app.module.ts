@@ -7,8 +7,6 @@ import { DynamicSecurityModule } from './nestjs-dynsec/dynsec.module';
 
 import { MqttGatewayModule } from './nestjs-mqtt';
 
-import { PrismaService } from './prisma.service';
-
 import { NodeEventBus } from './eventBus/node.eventBus';
 
 import { RestSystemController } from './rest/system.controller';
@@ -76,8 +74,6 @@ const env = process.env.NODE_ENV || 'development';
     MqttNodeController,
   ],
   providers: [
-    PrismaService,
-
     // Event bus
     NodeEventBus,
 
