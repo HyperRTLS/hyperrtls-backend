@@ -1,4 +1,4 @@
-import { Type, PipeTransform, assignMetadata } from '@nestjs/common';
+import { Type, PipeTransform, assignMetadata, ParamData } from '@nestjs/common';
 
 import { SUBSCRIBE_METHOD_PARAM_DECORATOR } from '../mqtt.constants';
 
@@ -20,7 +20,7 @@ export enum SubscriberParamType {
  * @returns {ParameterDecorator} ParameterDecorator
  */
 function createSubscriberParamDecorator(paramType: SubscriberParamType) {
-  return (data?: any): ParameterDecorator => {
+  return (data?: ParamData): ParameterDecorator => {
     return (target, key, index) => {
       const args =
         Reflect.getMetadata(

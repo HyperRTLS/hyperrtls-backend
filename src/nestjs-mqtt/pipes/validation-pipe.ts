@@ -1,15 +1,16 @@
-import {
-  ArgumentMetadata,
-  Paramtype,
-  PipeTransform,
-  Type,
-} from '@nestjs/common';
+import { ArgumentMetadata, Paramtype, PipeTransform } from '@nestjs/common';
 import { ValidatorPackage } from '@nestjs/common/interfaces/external/validator-package.interface';
 import { TransformerPackage } from '@nestjs/common/interfaces/external/transformer-package.interface';
 import { ClassTransformOptions } from '@nestjs/common/interfaces/external/class-transform-options.interface';
 import { ValidatorOptions } from '@nestjs/common/interfaces/external/validator-options.interface';
 import { ValidationError } from '@nestjs/common/interfaces/external/validation-error.interface';
 import { loadPackage } from '@nestjs/common/utils/load-package.util';
+
+type PrimitiveType =
+  | BooleanConstructor
+  | NumberConstructor
+  | BigIntConstructor
+  | StringConstructor;
 
 export class MqttValidationError extends Error {
   constructor(readonly errors: ValidationError[]) {
@@ -25,15 +26,15 @@ export class MqttValidationError extends Error {
 export interface MqttValidationPipeOptions {
   validatorOptions?: ValidatorOptions;
   transformOptions?: ClassTransformOptions;
-  exceptionFactory?: (errors: ValidationError[]) => any;
+  exceptionFactory?: (errors: ValidationError[]) => unknown;
   validatorPackage?: ValidatorPackage;
   transformerPackage?: TransformerPackage;
 }
 
-export class MqttValidationPipe implements PipeTransform<any> {
+export class MqttValidationPipe implements PipeTransform {
   private readonly validatorOptions?: ValidatorOptions;
   private readonly transformOptions?: ClassTransformOptions;
-  private readonly exceptionFactory: (errors: ValidationError[]) => any;
+  private readonly exceptionFactory: (errors: ValidationError[]) => unknown;
   private readonly validatorPackage: ValidatorPackage;
   private readonly transformerPackage: TransformerPackage;
 
@@ -127,21 +128,23 @@ export class MqttValidationPipe implements PipeTransform<any> {
     }
   }
 
-  private isValuePrimitive(value: any) {
+  private isValuePrimitive(value: unknown) {
     return ['boolean', 'number', 'bigint', 'string'].includes(typeof value);
   }
 
-  private isMetatypePrimitive(metatype: Type<any>) {
-    return [Boolean, Number, BigInt, String].includes(metatype as any);
+  private isMetatypePrimitive(metatype: unknown): metatype is PrimitiveType {
+    return [Boolean, Number, BigInt, String].includes(
+      metatype as PrimitiveType,
+    );
   }
 
-  private transformPrimitive(value: Buffer, metatype: Type<any>) {
+  private transformPrimitive(value: Buffer, metatype: PrimitiveType) {
     switch (metatype) {
       case Boolean:
         return value.toString() === 'true';
       case Number:
         return +value.toString();
-      case BigInt as any:
+      case BigInt:
         return BigInt(value.toString());
       case String:
         return value.toString();

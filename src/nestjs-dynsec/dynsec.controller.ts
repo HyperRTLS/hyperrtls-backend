@@ -80,7 +80,7 @@ export class DynamicSecurityController {
     });
   }
 
-  private registerResponseListener(id: string, callback: any) {
+  private registerResponseListener(id: string, callback: ResponseListener) {
     this.responseListeners.set(id, callback);
   }
 

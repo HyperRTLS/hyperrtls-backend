@@ -34,7 +34,7 @@ import {
 
 export interface MessageHandler {
   pattern: string;
-  callback: (...args: any[]) => Promise<any>;
+  callback: (...args: unknown[]) => Promise<unknown>;
   patternMatcher: (topic: string) => boolean;
   topicParser: (topic: string) => ParsedTopic;
 }

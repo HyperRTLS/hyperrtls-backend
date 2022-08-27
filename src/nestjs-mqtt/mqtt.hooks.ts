@@ -7,31 +7,31 @@ import {
 } from 'mqtt';
 
 export interface OnMqttGatewayConnect {
-  onMqttGatewayConnect(client: Client, packet: IConnackPacket): any;
+  onMqttGatewayConnect(client: Client, packet: IConnackPacket): void;
 }
 
 export interface OnMqttGatewayReconnect {
-  onMqttGatewayReconnect(client: Client): any;
+  onMqttGatewayReconnect(client: Client): void;
 }
 
 export interface OnMqttGatewayClose {
-  onMqttGatewayClose(client: Client): any;
+  onMqttGatewayClose(client: Client): void;
 }
 
 export interface OnMqttGatewayDisconnect {
-  onMqttGatewayDisconnect(client: Client, packet: IDisconnectPacket): any;
+  onMqttGatewayDisconnect(client: Client, packet: IDisconnectPacket): void;
 }
 
 export interface OnMqttGatewayOffline {
-  onMqttGatewayOffline(client: Client): any;
+  onMqttGatewayOffline(client: Client): void;
 }
 
 export interface OnMqttGatewayError {
-  onMqttGatewayError(client: Client, error: Error): any;
+  onMqttGatewayError(client: Client, error: Error): void;
 }
 
 export interface OnMqttGatewayEnd {
-  onMqttGatewayEnd(client: Client): any;
+  onMqttGatewayEnd(client: Client): void;
 }
 
 export interface OnMqttGatewayMessage {
@@ -40,15 +40,15 @@ export interface OnMqttGatewayMessage {
     topic: string,
     message: Buffer,
     packet: IPublishPacket,
-  ): any;
+  ): void;
 }
 
 export interface OnMqttGatewayPacketSend {
-  onMqttGatewayPacketSend(client: Client, packet: IPacket): any;
+  onMqttGatewayPacketSend(client: Client, packet: IPacket): void;
 }
 
 export interface OnMqttGatewayPacketReceive {
-  onMqttGatewayPacketReceive(client: Client, packet: IPacket): any;
+  onMqttGatewayPacketReceive(client: Client, packet: IPacket): void;
 }
 
 export const hookToEventMapping = {
