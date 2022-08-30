@@ -53,7 +53,7 @@ const env = process.env.NODE_ENV || 'development';
           username: configService.get('MQTT_BROKER_USERNAME'),
           password: configService.get('MQTT_BROKER_PASSWORD'),
         },
-        discoverControllers: true,
+        discoverControllers: false,
         suppressRoutesErrors: true,
         enableFilters: false,
         enableGuards: false,
@@ -68,10 +68,6 @@ const env = process.env.NODE_ENV || 'development';
     RestDynamicSecurityController,
     RestGatewayController,
     RestNodeController,
-
-    // MQTT controllers
-    MqttGatewayController,
-    MqttNodeController,
   ],
   providers: [
     // Event bus
@@ -82,6 +78,10 @@ const env = process.env.NODE_ENV || 'development';
     RestDynamicSecurityService,
     RestGatewayService,
     RestNodeService,
+
+    // MQTT controllers
+    MqttGatewayController,
+    MqttNodeController,
 
     // MQTT services
     MqttGatewayService,
