@@ -9,8 +9,6 @@ import { MqttGatewayModule } from './nestjs-mqtt';
 
 import { TagEventBus } from './eventBus/tag.eventBus';
 
-import { RestDynamicSecurityController } from './rest/dynsec.controller';
-import { RestDynamicSecurityService } from './rest/dynsec.service';
 import { RestNetworkController } from './rest/network.controller';
 import { RestNetworkService } from './rest/network.service';
 
@@ -60,7 +58,6 @@ const env = process.env.NODE_ENV || 'development';
   ],
   controllers: [
     // REST controllers
-    RestDynamicSecurityController,
     RestNetworkController,
   ],
   providers: [
@@ -68,7 +65,6 @@ const env = process.env.NODE_ENV || 'development';
     TagEventBus,
 
     // REST services
-    RestDynamicSecurityService,
     RestNetworkService,
 
     // MQTT controllers
