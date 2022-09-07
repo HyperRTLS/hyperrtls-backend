@@ -7,21 +7,19 @@ import { DynamicSecurityModule } from './nestjs-dynsec/dynsec.module';
 
 import { MqttGatewayModule } from './nestjs-mqtt';
 
-import { NodeEventBus } from './eventBus/node.eventBus';
+import { TagEventBus } from './eventBus/tag.eventBus';
 
 import { RestSystemController } from './rest/system.controller';
 import { RestSystemService } from './rest/system.service';
 import { RestDynamicSecurityController } from './rest/dynsec.controller';
 import { RestDynamicSecurityService } from './rest/dynsec.service';
-import { RestGatewayController } from './rest/gateway.controller';
-import { RestGatewayService } from './rest/gateway.service';
-import { RestNodeController } from './rest/node.controller';
-import { RestNodeService } from './rest/node.service';
+import { RestNetworkController } from './rest/network.controller';
+import { RestNetworkService } from './rest/network.service';
 
 import { MqttGatewayController } from './mqtt/gateway.controller';
 import { MqttGatewayService } from './mqtt/gateway.service';
-import { MqttNodeController } from './mqtt/node.controller';
-import { MqttNodeService } from './mqtt/node.service';
+import { MqttTagController } from './mqtt/tag.controller';
+import { MqttTagService } from './mqtt/tag.service';
 
 const env = process.env.NODE_ENV || 'development';
 
@@ -66,26 +64,24 @@ const env = process.env.NODE_ENV || 'development';
     // REST controllers
     RestSystemController,
     RestDynamicSecurityController,
-    RestGatewayController,
-    RestNodeController,
+    RestNetworkController,
   ],
   providers: [
     // Event bus
-    NodeEventBus,
+    TagEventBus,
 
     // REST services
     RestSystemService,
     RestDynamicSecurityService,
-    RestGatewayService,
-    RestNodeService,
+    RestNetworkService,
 
     // MQTT controllers
     MqttGatewayController,
-    MqttNodeController,
+    MqttTagController,
 
     // MQTT services
     MqttGatewayService,
-    MqttNodeService,
+    MqttTagService,
   ],
 })
 export class AppModule {}
