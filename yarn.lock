@@ -3837,7 +3837,6 @@ __metadata:
     rxjs: 7.5.6
     source-map-support: 0.5.21
     supertest: 6.2.4
-    systeminformation: 5.12.6
     ts-jest: 28.0.8
     ts-loader: 9.3.1
     ts-node: 10.9.1
@@ -6437,16 +6436,6 @@ __metadata:
   version: 4.0.0
   resolution: "symbol-observable@npm:4.0.0"
   checksum: 212c7edce6186634d671336a88c0e0bbd626c2ab51ed57498dc90698cce541839a261b969c2a1e8dd43762133d47672e8b62e0b1ce9cf4157934ba45fd172ba8
-  languageName: node
-  linkType: hard
-
-"systeminformation@npm:5.12.6":
-  version: 5.12.6
-  resolution: "systeminformation@npm:5.12.6"
-  bin:
-    systeminformation: lib/cli.js
-  checksum: ae112148530bc31c4c43c4966b8f56822c874caa93daa1f146ea2372ec32738b315f10c58fb968611d082d9614bac054a9a3740b7e7df1201a2a581c73f3306c
-  conditions: (os=darwin | os=linux | os=win32 | os=freebsd | os=openbsd | os=netbsd | os=sunos | os=android)
   languageName: node
   linkType: hard
 

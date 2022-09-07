@@ -67,7 +67,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rxjs", "npm:7.5.6"],\
             ["source-map-support", "npm:0.5.21"],\
             ["supertest", "npm:6.2.4"],\
-            ["systeminformation", "npm:5.12.6"],\
             ["ts-jest", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:28.0.8"],\
             ["ts-loader", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.3.1"],\
             ["ts-node", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:10.9.1"],\
@@ -5096,7 +5095,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rxjs", "npm:7.5.6"],\
             ["source-map-support", "npm:0.5.21"],\
             ["supertest", "npm:6.2.4"],\
-            ["systeminformation", "npm:5.12.6"],\
             ["ts-jest", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:28.0.8"],\
             ["ts-loader", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.3.1"],\
             ["ts-node", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:10.9.1"],\
@@ -8056,15 +8054,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/symbol-observable-npm-4.0.0-5c36594410-212c7edce6.zip/node_modules/symbol-observable/",\
           "packageDependencies": [\
             ["symbol-observable", "npm:4.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["systeminformation", [\
-        ["npm:5.12.6", {\
-          "packageLocation": "./.yarn/unplugged/systeminformation-npm-5.12.6-688d3faa38/node_modules/systeminformation/",\
-          "packageDependencies": [\
-            ["systeminformation", "npm:5.12.6"]\
           ],\
           "linkType": "HARD"\
         }]\
