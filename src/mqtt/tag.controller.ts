@@ -28,11 +28,18 @@ export class TagLocationPayload {
 export class MqttTagController {
   constructor(private readonly mqttTagService: MqttTagService) {}
 
+  @MqttSubscribe('+tagId/ping')
+  onPing(@Topic('tagId') tagId: string) {
+    this.mqttTagService.pushPingEvent(tagId, {
+      timestamp: new Date().getTime(),
+    });
+  }
+
   @MqttSubscribe('+tagId/location')
   onLocationData(
     @Topic('tagId') tagId: string,
     @Payload() payload: TagLocationPayload,
   ) {
-    this.mqttTagService.pushLocationEvent({ tagId, ...payload });
+    this.mqttTagService.pushLocationEvent(tagId, payload);
   }
 }

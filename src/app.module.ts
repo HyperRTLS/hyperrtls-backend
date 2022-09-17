@@ -7,15 +7,17 @@ import { DynamicSecurityModule } from './nestjs-dynsec/dynsec.module';
 
 import { MqttGatewayModule } from './nestjs-mqtt';
 
-import { TagEventBus } from './eventBus/tag.eventBus';
+import { DevicesEventBus } from './eventBus/devices.eventBus';
 
 import { RestNetworkController } from './rest/network.controller';
 import { RestNetworkService } from './rest/network.service';
 
-import { MqttGatewayController } from './mqtt/gateway.controller';
-import { MqttGatewayService } from './mqtt/gateway.service';
 import { MqttTagController } from './mqtt/tag.controller';
 import { MqttTagService } from './mqtt/tag.service';
+import { MqttAnchorController } from './mqtt/anchor.controller';
+import { MqttAnchorService } from './mqtt/anchor.service';
+import { MqttGatewayController } from './mqtt/gateway.controller';
+import { MqttGatewayService } from './mqtt/gateway.service';
 
 const env = process.env.NODE_ENV || 'development';
 
@@ -61,19 +63,21 @@ const env = process.env.NODE_ENV || 'development';
     RestNetworkController,
   ],
   providers: [
-    // Event bus
-    TagEventBus,
+    // Event buses
+    DevicesEventBus,
 
     // REST services
     RestNetworkService,
 
     // MQTT controllers
-    MqttGatewayController,
     MqttTagController,
+    MqttAnchorController,
+    MqttGatewayController,
 
     // MQTT services
-    MqttGatewayService,
     MqttTagService,
+    MqttAnchorService,
+    MqttGatewayService,
   ],
 })
 export class AppModule {}
