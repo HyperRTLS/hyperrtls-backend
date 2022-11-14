@@ -3,27 +3,13 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 
 import { EnvironmentVariables, validateConfig } from './config.validator';
 
+import { MikroOrmModule } from '@mikro-orm/nestjs';
+
 import { DynamicSecurityModule } from './nestjs-dynsec/dynsec.module';
 
 import { MqttGatewayModule } from './nestjs-mqtt';
 
-import { PrismaService } from './prisma.service';
-
-import { NodeEventBus } from './eventBus/node.eventBus';
-
-import { RestSystemController } from './rest/system.controller';
-import { RestSystemService } from './rest/system.service';
-import { RestDynamicSecurityController } from './rest/dynsec.controller';
-import { RestDynamicSecurityService } from './rest/dynsec.service';
-import { RestGatewayController } from './rest/gateway.controller';
-import { RestGatewayService } from './rest/gateway.service';
-import { RestNodeController } from './rest/node.controller';
-import { RestNodeService } from './rest/node.service';
-
-import { MqttGatewayController } from './mqtt/gateway.controller';
-import { MqttGatewayService } from './mqtt/gateway.service';
-import { MqttNodeController } from './mqtt/node.controller';
-import { MqttNodeService } from './mqtt/node.service';
+import { DevicesModule } from './devices/devices.module';
 
 const env = process.env.NODE_ENV || 'development';
 
@@ -33,6 +19,17 @@ const env = process.env.NODE_ENV || 'development';
       isGlobal: true,
       envFilePath: `.env.${env}`,
       validate: validateConfig,
+    }),
+    MikroOrmModule.forRootAsync({
+      useFactory: async (
+        configService: ConfigService<EnvironmentVariables, true>,
+      ) => ({
+        clientUrl: configService.get('DATABASE_URL'),
+        type: 'postgresql',
+        autoLoadEntities: true,
+        debug: true,
+      }),
+      inject: [ConfigService],
     }),
     DynamicSecurityModule.registerAsync({
       useFactory: async (
@@ -55,37 +52,17 @@ const env = process.env.NODE_ENV || 'development';
           username: configService.get('MQTT_BROKER_USERNAME'),
           password: configService.get('MQTT_BROKER_PASSWORD'),
         },
-        discoverControllers: true,
+        discoverControllers: false,
+        suppressRoutesErrors: true,
+        enableFilters: false,
+        enableGuards: false,
+        enableInterceptors: false,
       }),
       inject: [ConfigService],
     }),
+    DevicesModule,
   ],
-  controllers: [
-    // REST controllers
-    RestSystemController,
-    RestDynamicSecurityController,
-    RestGatewayController,
-    RestNodeController,
-
-    // MQTT controllers
-    MqttGatewayController,
-    MqttNodeController,
-  ],
-  providers: [
-    PrismaService,
-
-    // Event bus
-    NodeEventBus,
-
-    // REST services
-    RestSystemService,
-    RestDynamicSecurityService,
-    RestGatewayService,
-    RestNodeService,
-
-    // MQTT services
-    MqttGatewayService,
-    MqttNodeService,
-  ],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}

@@ -1,6 +1,5 @@
-import { plainToClass } from '@nestjs/class-transformer';
-
-import { validateSync, IsString } from '@nestjs/class-validator';
+import { plainToClass } from 'class-transformer';
+import { validateSync, IsString } from 'class-validator';
 
 export class EnvironmentVariables {
   @IsString()

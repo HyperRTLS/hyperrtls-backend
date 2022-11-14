@@ -1,6 +1,7 @@
 # Compiled output
 /dist
 /node_modules
+tsconfig.build.tsbuildinfo
 
 # Logs
 logs
@@ -38,5 +39,11 @@ lerna-debug.log*
 *.env
 *.env.*
 
-# Do not include migrations in version control for now
-prisma/migrations
+# Yarn
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
