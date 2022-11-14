@@ -1590,10 +1590,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:16.11.58":
-  version: 16.11.58
-  resolution: "@types/node@npm:16.11.58"
-  checksum: efdf14c62e6c1a8e758416aaa3ae4b81015ffd4e1f31c05680d1242817ba23f0b4b1345886fe5aeb3c05d818bcaed1a7af4d637e7cca5723a5e4ac8b759d3ace
+"@types/node@npm:18.11.9":
+  version: 18.11.9
+  resolution: "@types/node@npm:18.11.9"
+  checksum: cc0aae109e9b7adefc32eecb838d6fad931663bb06484b5e9cbbbf74865c721b03d16fd8d74ad90e31dbe093d956a7c2c306ba5429ba0c00f3f7505103d7a496
   languageName: node
   linkType: hard
 
@@ -4246,7 +4246,7 @@ __metadata:
     "@nestjs/testing": 9.0.11
     "@types/express": 4.17.13
     "@types/jest": 29.0.0
-    "@types/node": 16.11.58
+    "@types/node": 18.11.9
     "@types/supertest": 2.0.12
     "@types/uuid": 8.3.4
     "@typescript-eslint/eslint-plugin": 5.36.2
