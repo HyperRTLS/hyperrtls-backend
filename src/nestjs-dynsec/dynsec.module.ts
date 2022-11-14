@@ -1,6 +1,7 @@
 import { Logger, Module, OnApplicationBootstrap } from '@nestjs/common';
-import { DynamicSecurityController } from './dynsec.controller';
 import { ConfigurableModuleClass } from './dynsec.module-definition';
+
+import { DynamicSecurityController } from './dynsec.controller';
 import { DynamicSecurityService } from './dynsec.service';
 
 @Module({

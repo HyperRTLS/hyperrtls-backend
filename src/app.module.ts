@@ -3,21 +3,13 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 
 import { EnvironmentVariables, validateConfig } from './config.validator';
 
+import { MikroOrmModule } from '@mikro-orm/nestjs';
+
 import { DynamicSecurityModule } from './nestjs-dynsec/dynsec.module';
 
 import { MqttGatewayModule } from './nestjs-mqtt';
 
-import { DevicesEventBus } from './eventBus/devices.eventBus';
-
-import { RestNetworkController } from './rest/network.controller';
-import { RestNetworkService } from './rest/network.service';
-
-import { MqttTagController } from './mqtt/tag.controller';
-import { MqttTagService } from './mqtt/tag.service';
-import { MqttAnchorController } from './mqtt/anchor.controller';
-import { MqttAnchorService } from './mqtt/anchor.service';
-import { MqttGatewayController } from './mqtt/gateway.controller';
-import { MqttGatewayService } from './mqtt/gateway.service';
+import { DevicesModule } from './devices/devices.module';
 
 const env = process.env.NODE_ENV || 'development';
 
@@ -27,6 +19,17 @@ const env = process.env.NODE_ENV || 'development';
       isGlobal: true,
       envFilePath: `.env.${env}`,
       validate: validateConfig,
+    }),
+    MikroOrmModule.forRootAsync({
+      useFactory: async (
+        configService: ConfigService<EnvironmentVariables, true>,
+      ) => ({
+        clientUrl: configService.get('DATABASE_URL'),
+        type: 'postgresql',
+        autoLoadEntities: true,
+        debug: true,
+      }),
+      inject: [ConfigService],
     }),
     DynamicSecurityModule.registerAsync({
       useFactory: async (
@@ -57,27 +60,9 @@ const env = process.env.NODE_ENV || 'development';
       }),
       inject: [ConfigService],
     }),
+    DevicesModule,
   ],
-  controllers: [
-    // REST controllers
-    RestNetworkController,
-  ],
-  providers: [
-    // Event buses
-    DevicesEventBus,
-
-    // REST services
-    RestNetworkService,
-
-    // MQTT controllers
-    MqttTagController,
-    MqttAnchorController,
-    MqttGatewayController,
-
-    // MQTT services
-    MqttTagService,
-    MqttAnchorService,
-    MqttGatewayService,
-  ],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
