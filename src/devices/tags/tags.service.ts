@@ -3,7 +3,6 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import {
   MikroORM,
   UseRequestContext,
-  RequiredEntityData,
   EntityData,
   QueryOrder,
   wrap,
@@ -19,6 +18,11 @@ import { TagsEventBus } from './tags.eventBus';
 
 type GetOptions = {
   includeAllPositions?: boolean;
+};
+
+type CreateTagData = {
+  id: string;
+  name: string;
 };
 
 @Injectable()
@@ -55,8 +59,8 @@ export class TagsService {
     return results[0];
   }
 
-  public async create(data: RequiredEntityData<TagEntity>) {
-    const newTag = this.tagRepository.create(data);
+  public async create(data: CreateTagData) {
+    const newTag = new TagEntity(data.id, data.name);
     await this.tagRepository.persistAndFlush(newTag);
     return newTag;
   }

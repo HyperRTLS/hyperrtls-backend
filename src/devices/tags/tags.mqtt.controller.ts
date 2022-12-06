@@ -17,7 +17,7 @@ export class TagPositionPayload {
   position: [number, number, number];
 }
 
-@MqttGateway('tags')
+@MqttGateway('gateways/+gatewayId/tags')
 @UsePipes(new MqttValidationPipe())
 export class TagsMqttController {
   constructor(private readonly tagsService: TagsService) {}

@@ -19,15 +19,20 @@ export class PositionEntity {
   @ManyToOne({ entity: () => TagEntity, hidden: true })
   tag!: TagEntity;
 
-  @Property()
+  @Property({ columnType: 'float', hidden: true })
   x!: number;
 
-  @Property()
+  @Property({ columnType: 'float', hidden: true })
   y!: number;
 
-  @Property()
+  @Property({ columnType: 'float', hidden: true })
   z!: number;
 
   @Property()
   createdAt?: Date = new Date();
+
+  @Property({ persist: false })
+  get position() {
+    return [this.x, this.y, this.z];
+  }
 }

@@ -8,6 +8,7 @@ import {
   UsePipes,
   ValidationPipe,
   Query,
+  Delete,
 } from '@nestjs/common';
 
 import {
@@ -101,6 +102,11 @@ export class TagsRestController {
     const { id, name } = payload;
 
     return this.tagsService.create({ id, name });
+  }
+
+  @Delete(':id')
+  delete(@Param('id') id: string) {
+    return this.tagsService.deleteById(id);
   }
 
   @Sse('_events')
