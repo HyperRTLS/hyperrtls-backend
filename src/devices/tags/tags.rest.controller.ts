@@ -104,11 +104,6 @@ export class TagsRestController {
     return this.tagsService.create({ id, name });
   }
 
-  @Delete(':id')
-  delete(@Param('id') id: string) {
-    return this.tagsService.deleteById(id);
-  }
-
   @Sse('_events')
   subscribeToEvents(@Query() filters: GetTagsEventsFiltersQuery) {
     return this.tagsService.getEventStream(filters);
@@ -117,6 +112,11 @@ export class TagsRestController {
   @Get(':id')
   getOneById(@Param('id') id: string, @Query() options: GetTagOptionsQuery) {
     return this.tagsService.getOneById(id, options);
+  }
+
+  @Delete(':id')
+  delete(@Param('id') id: string) {
+    return this.tagsService.deleteById(id);
   }
 
   @Get(':id/_events')
