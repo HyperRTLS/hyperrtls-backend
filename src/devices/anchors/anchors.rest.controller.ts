@@ -72,6 +72,7 @@ export class GetAnchorEventsFiltersQuery {
   @Transform(({ value }) => value.split(','))
   eventTypes?: string[];
 }
+
 @Controller('devices/Anchors')
 @UsePipes(
   new ValidationPipe({

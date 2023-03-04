@@ -7,12 +7,14 @@ import {
   QueryOrder,
   wrap,
 } from '@mikro-orm/core';
+
 import { EntityRepository } from '@mikro-orm/postgresql';
 import { InjectRepository } from '@mikro-orm/nestjs';
 
 import { GatewayEntity } from './gateway.entity';
 
 import { GatewaysEventBus } from './gateways.eventBus';
+
 import { DynamicSecurityService } from '../../nestjs-dynsec/dynsec.service';
 
 type GetOptions = unknown;

@@ -1,4 +1,5 @@
 import { Global, Logger, Module, OnApplicationBootstrap } from '@nestjs/common';
+
 import { ConfigurableModuleClass } from './dynsec.module-definition';
 
 import { DynamicSecurityController } from './dynsec.controller';
