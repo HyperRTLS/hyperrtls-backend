@@ -12,7 +12,7 @@ FROM node:lts-alpine@sha256:47d97b93629d9461d64197773966cc49081cf4463b1b07de5a38
 
 EXPOSE 3000
 
-ENV NODE_END production
+ENV NODE_ENV production
 
 USER node
 WORKDIR /home/node
