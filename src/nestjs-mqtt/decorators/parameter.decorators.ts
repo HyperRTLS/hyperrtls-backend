@@ -26,14 +26,14 @@ function createSubscriberParamDecorator(paramType: SubscriberParamType) {
         Reflect.getMetadata(
           SUBSCRIBE_METHOD_PARAM_DECORATOR,
           target.constructor,
-          key,
+          key!,
         ) || {};
 
       Reflect.defineMetadata(
         SUBSCRIBE_METHOD_PARAM_DECORATOR,
         assignMetadata(args, paramType, index, data),
         target.constructor,
-        key,
+        key!,
       );
     };
   };
@@ -54,14 +54,14 @@ function createPipesSubscriberParamDecorator(paramType: SubscriberParamType) {
         Reflect.getMetadata(
           SUBSCRIBE_METHOD_PARAM_DECORATOR,
           target.constructor,
-          key,
+          key!,
         ) || {};
 
       Reflect.defineMetadata(
         SUBSCRIBE_METHOD_PARAM_DECORATOR,
         assignMetadata(args, paramType, index, undefined, ...pipes),
         target.constructor,
-        key,
+        key!,
       );
     };
   };
