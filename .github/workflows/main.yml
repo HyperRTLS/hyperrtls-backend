@@ -3,10 +3,10 @@ name: Node.JS CI
 on:
   workflow_dispatch:
   push:
-    branches: [ 'development', 'main' ]
-    tags: [ "v*.*.*" ]
+    branches: ['development', 'main']
+    tags: ['v*.*.*']
   pull_request:
-    branches: [ 'development', 'main' ]
+    branches: ['development', 'main']
 
 env:
   REGISTRY: ghcr.io
@@ -19,19 +19,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-    - name: Setup Node with dependency caching
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16'
-        cache: 'yarn'
-    - name: Install dependencies
-      run: yarn --immutable
-    - name: Build the project
-      run: yarn build
-    - name: Run test suites
-      run: yarn test
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Setup Node with dependency caching
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'yarn'
+      - name: Install dependencies
+        run: yarn --immutable
+      - name: Build the project
+        run: yarn build
+      - name: Run test suites
+        run: yarn test
   build-and-push-image:
     name: Build and push Docker image
     needs: build
@@ -77,4 +77,4 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           platforms: linux/amd64,linux/arm64
-        
+          provenance: false
