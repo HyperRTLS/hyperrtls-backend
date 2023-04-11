@@ -1,8 +1,9 @@
-import { Module } from '@nestjs/common';
+import { Module, OnModuleInit } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 
 import { EnvironmentVariables, validateConfig } from './config.validator';
 
+import { MikroORM } from '@mikro-orm/core';
 import { MikroOrmModule } from '@mikro-orm/nestjs';
 
 import { DynamicSecurityModule } from './nestjs-dynsec/dynsec.module';
@@ -27,7 +28,11 @@ const env = process.env.NODE_ENV || 'development';
         clientUrl: configService.get('DATABASE_URL'),
         type: 'postgresql',
         autoLoadEntities: true,
-        debug: true,
+        debug: process.env.NODE_ENV === 'development',
+        migrations: {
+          path: 'dist/migrations',
+          pathTs: 'src/migrations',
+        },
       }),
       inject: [ConfigService],
     }),
@@ -65,4 +70,10 @@ const env = process.env.NODE_ENV || 'development';
   controllers: [],
   providers: [],
 })
-export class AppModule {}
+export class AppModule implements OnModuleInit {
+  constructor(private readonly orm: MikroORM) {}
+
+  async onModuleInit() {
+    await this.orm.getMigrator().up();
+  }
+}
