@@ -42,7 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/testing", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
             ["@types/express", "npm:4.17.17"],\
             ["@types/jest", "npm:29.5.0"],\
-            ["@types/node", "npm:18.15.11"],\
+            ["@types/node", "npm:20.11.30"],\
             ["@types/supertest", "npm:2.0.12"],\
             ["@types/uuid", "npm:9.0.1"],\
             ["@typescript-eslint/eslint-plugin", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:5.58.0"],\
@@ -2459,17 +2459,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/node", [\
-        ["npm:18.15.11", {\
-          "packageLocation": "./.yarn/cache/@types-node-npm-18.15.11-fd8ceaaffd-977b4ad047.zip/node_modules/@types/node/",\
-          "packageDependencies": [\
-            ["@types/node", "npm:18.15.11"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:18.7.13", {\
           "packageLocation": "./.yarn/cache/@types-node-npm-18.7.13-148c07645a-45431e7e89.zip/node_modules/@types/node/",\
           "packageDependencies": [\
             ["@types/node", "npm:18.7.13"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:20.11.30", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-20.11.30-b20dd3f11f-7597767aa3.zip/node_modules/@types/node/",\
+          "packageDependencies": [\
+            ["@types/node", "npm:20.11.30"],\
+            ["undici-types", "npm:5.26.5"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5661,7 +5662,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/testing", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
             ["@types/express", "npm:4.17.17"],\
             ["@types/jest", "npm:29.5.0"],\
-            ["@types/node", "npm:18.15.11"],\
+            ["@types/node", "npm:20.11.30"],\
             ["@types/supertest", "npm:2.0.12"],\
             ["@types/uuid", "npm:9.0.1"],\
             ["@typescript-eslint/eslint-plugin", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:5.58.0"],\
@@ -9454,7 +9455,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tsconfig/node12", "npm:1.0.11"],\
             ["@tsconfig/node14", "npm:1.0.3"],\
             ["@tsconfig/node16", "npm:1.0.3"],\
-            ["@types/node", "npm:18.15.11"],\
+            ["@types/node", "npm:20.11.30"],\
             ["@types/swc__core", null],\
             ["@types/swc__wasm", null],\
             ["@types/typescript", null],\
@@ -9673,6 +9674,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["glob", "npm:8.0.3"],\
             ["pony-cause", "npm:2.1.4"],\
             ["type-fest", "npm:2.19.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["undici-types", [\
+        ["npm:5.26.5", {\
+          "packageLocation": "./.yarn/cache/undici-types-npm-5.26.5-de4f7c7bb9-3192ef6f3f.zip/node_modules/undici-types/",\
+          "packageDependencies": [\
+            ["undici-types", "npm:5.26.5"]\
           ],\
           "linkType": "HARD"\
         }]\
