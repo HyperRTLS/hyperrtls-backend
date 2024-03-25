@@ -36,7 +36,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/cli", "npm:9.3.0"],\
             ["@nestjs/common", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
             ["@nestjs/config", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:2.3.1"],\
-            ["@nestjs/core", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
+            ["@nestjs/core", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:10.3.5"],\
             ["@nestjs/platform-express", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
             ["@nestjs/schematics", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.1.0"],\
             ["@nestjs/testing", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
@@ -1743,7 +1743,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@mikro-orm/nestjs", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:5.1.8"],\
             ["@mikro-orm/core", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:5.6.16"],\
             ["@nestjs/common", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
-            ["@nestjs/core", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
+            ["@nestjs/core", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:10.3.5"],\
             ["@types/mikro-orm__core", null],\
             ["@types/nestjs__common", null],\
             ["@types/nestjs__core", null]\
@@ -1928,17 +1928,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@nestjs/core", [\
-        ["npm:9.4.0", {\
-          "packageLocation": "./.yarn/unplugged/@nestjs-core-virtual-bcf3f66dde/node_modules/@nestjs/core/",\
+        ["npm:10.3.5", {\
+          "packageLocation": "./.yarn/unplugged/@nestjs-core-virtual-13d2c3a8e5/node_modules/@nestjs/core/",\
           "packageDependencies": [\
-            ["@nestjs/core", "npm:9.4.0"]\
+            ["@nestjs/core", "npm:10.3.5"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0", {\
-          "packageLocation": "./.yarn/unplugged/@nestjs-core-virtual-bcf3f66dde/node_modules/@nestjs/core/",\
+        ["virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:10.3.5", {\
+          "packageLocation": "./.yarn/unplugged/@nestjs-core-virtual-13d2c3a8e5/node_modules/@nestjs/core/",\
           "packageDependencies": [\
-            ["@nestjs/core", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
+            ["@nestjs/core", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:10.3.5"],\
             ["@nestjs/common", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
             ["@nestjs/microservices", null],\
             ["@nestjs/platform-express", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
@@ -1955,7 +1955,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["path-to-regexp", "npm:3.2.0"],\
             ["reflect-metadata", "npm:0.1.13"],\
             ["rxjs", "npm:7.8.0"],\
-            ["tslib", "npm:2.5.0"],\
+            ["tslib", "npm:2.6.2"],\
             ["uid", "npm:2.0.2"]\
           ],\
           "packagePeers": [\
@@ -1988,7 +1988,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@nestjs/platform-express", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
             ["@nestjs/common", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
-            ["@nestjs/core", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
+            ["@nestjs/core", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:10.3.5"],\
             ["@types/nestjs__common", null],\
             ["@types/nestjs__core", null],\
             ["body-parser", "npm:1.20.2"],\
@@ -2062,7 +2062,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@nestjs/testing", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
             ["@nestjs/common", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
-            ["@nestjs/core", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
+            ["@nestjs/core", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:10.3.5"],\
             ["@nestjs/microservices", null],\
             ["@nestjs/platform-express", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
             ["@types/nestjs__common", null],\
@@ -5655,7 +5655,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/cli", "npm:9.3.0"],\
             ["@nestjs/common", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
             ["@nestjs/config", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:2.3.1"],\
-            ["@nestjs/core", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
+            ["@nestjs/core", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:10.3.5"],\
             ["@nestjs/platform-express", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
             ["@nestjs/schematics", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.1.0"],\
             ["@nestjs/testing", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
@@ -9533,6 +9533,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/tslib-npm-2.5.0-bb364efebd-ae3ed5f9ce.zip/node_modules/tslib/",\
           "packageDependencies": [\
             ["tslib", "npm:2.5.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:2.6.2", {\
+          "packageLocation": "./.yarn/cache/tslib-npm-2.6.2-4fc8c068d9-329ea56123.zip/node_modules/tslib/",\
+          "packageDependencies": [\
+            ["tslib", "npm:2.6.2"]\
           ],\
           "linkType": "HARD"\
         }]\
