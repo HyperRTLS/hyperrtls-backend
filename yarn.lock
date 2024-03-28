@@ -1161,19 +1161,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/config@npm:2.3.1":
-  version: 2.3.1
-  resolution: "@nestjs/config@npm:2.3.1"
+"@nestjs/config@npm:3.2.1":
+  version: 3.2.1
+  resolution: "@nestjs/config@npm:3.2.1"
   dependencies:
-    dotenv: 16.0.3
+    dotenv: 16.4.5
     dotenv-expand: 10.0.0
     lodash: 4.17.21
-    uuid: 9.0.0
+    uuid: 9.0.1
   peerDependencies:
-    "@nestjs/common": ^7.0.0 || ^8.0.0 || ^9.0.0
-    reflect-metadata: ^0.1.13
-    rxjs: ^6.0.0 || ^7.2.0
-  checksum: 3397b9a9d8492a2520edde2711865025ba6d4385370ab33ef2cd3b19cd868ea9855f2ee7f089a3fda0c60234fdec622ed9916cc94b912e9736ebad2ccfb827a0
+    "@nestjs/common": ^8.0.0 || ^9.0.0 || ^10.0.0
+    rxjs: ^7.1.0
+  checksum: 396e314c7181ade2c2c36d1505a80b746eafaef4a03b8c0c8f38dfdae6d6258e3cf4ad02c875f522e3989819914d4f02d45169fb87d4af2a47cd3abc7c9e56ea
   languageName: node
   linkType: hard
 
@@ -3173,6 +3172,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv@npm:16.4.5":
+  version: 16.4.5
+  resolution: "dotenv@npm:16.4.5"
+  checksum: 301a12c3d44fd49888b74eb9ccf9f07a1f5df43f489e7fcb89647a2edcd84c42d6bc349dc8df099cd18f07c35c7b04685c1a4f3e6a6a9e6b30f8d48c15b7f49c
+  languageName: node
+  linkType: hard
+
 "duplexify@npm:^4.1.1":
   version: 4.1.2
   resolution: "duplexify@npm:4.1.2"
@@ -4250,7 +4256,7 @@ __metadata:
     "@mikro-orm/postgresql": 5.6.16
     "@nestjs/cli": 9.3.0
     "@nestjs/common": 9.4.0
-    "@nestjs/config": 2.3.1
+    "@nestjs/config": 3.2.1
     "@nestjs/core": 9.4.0
     "@nestjs/platform-express": 9.4.0
     "@nestjs/schematics": 9.1.0
@@ -7759,6 +7765,15 @@ __metadata:
   bin:
     uuid: dist/bin/uuid
   checksum: 8dd2c83c43ddc7e1c71e36b60aea40030a6505139af6bee0f382ebcd1a56f6cd3028f7f06ffb07f8cf6ced320b76aea275284b224b002b289f89fe89c389b028
+  languageName: node
+  linkType: hard
+
+"uuid@npm:9.0.1":
+  version: 9.0.1
+  resolution: "uuid@npm:9.0.1"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: 39931f6da74e307f51c0fb463dc2462807531dc80760a9bff1e35af4316131b4fc3203d16da60ae33f07fdca5b56f3f1dd662da0c99fea9aaeab2004780cc5f4
   languageName: node
   linkType: hard
 
