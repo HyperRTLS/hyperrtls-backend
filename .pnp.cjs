@@ -66,7 +66,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rimraf", "npm:5.0.0"],\
             ["rxjs", "npm:7.8.0"],\
             ["source-map-support", "npm:0.5.21"],\
-            ["supertest", "npm:6.3.3"],\
+            ["supertest", "npm:7.0.0"],\
             ["ts-jest", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:29.1.0"],\
             ["ts-loader", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.2"],\
             ["ts-node", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:10.9.1"],\
@@ -5179,14 +5179,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["formidable", [\
-        ["npm:2.1.2", {\
-          "packageLocation": "./.yarn/cache/formidable-npm-2.1.2-40ba18d67f-81c8e5d89f.zip/node_modules/formidable/",\
+        ["npm:3.5.1", {\
+          "packageLocation": "./.yarn/cache/formidable-npm-3.5.1-257e5eab8a-46b21496f9.zip/node_modules/formidable/",\
           "packageDependencies": [\
-            ["formidable", "npm:2.1.2"],\
+            ["formidable", "npm:3.5.1"],\
             ["dezalgo", "npm:1.0.4"],\
             ["hexoid", "npm:1.0.0"],\
-            ["once", "npm:1.4.0"],\
-            ["qs", "npm:6.11.0"]\
+            ["once", "npm:1.4.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5685,7 +5684,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rimraf", "npm:5.0.0"],\
             ["rxjs", "npm:7.8.0"],\
             ["source-map-support", "npm:0.5.21"],\
-            ["supertest", "npm:6.3.3"],\
+            ["supertest", "npm:7.0.0"],\
             ["ts-jest", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:29.1.0"],\
             ["ts-loader", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.2"],\
             ["ts-node", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:10.9.1"],\
@@ -9063,16 +9062,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["superagent", [\
-        ["npm:8.0.9", {\
-          "packageLocation": "./.yarn/cache/superagent-npm-8.0.9-da05128b97-5d00cdc7ce.zip/node_modules/superagent/",\
+        ["npm:9.0.1", {\
+          "packageLocation": "./.yarn/cache/superagent-npm-9.0.1-de90d6ad61-c332ef5609.zip/node_modules/superagent/",\
           "packageDependencies": [\
-            ["superagent", "npm:8.0.9"],\
+            ["superagent", "npm:9.0.1"],\
             ["component-emitter", "npm:1.3.0"],\
             ["cookiejar", "npm:2.1.4"],\
             ["debug", "virtual:b86a9fb34323a98c6519528ed55faa0d9b44ca8879307c0b29aa384bde47ff59a7d0c9051b31246f14521dfb71ba3c5d6d0b35c29fffc17bf875aa6ad977d9e8#npm:4.3.4"],\
             ["fast-safe-stringify", "npm:2.1.1"],\
             ["form-data", "npm:4.0.0"],\
-            ["formidable", "npm:2.1.2"],\
+            ["formidable", "npm:3.5.1"],\
             ["methods", "npm:1.1.2"],\
             ["mime", "npm:2.6.0"],\
             ["qs", "npm:6.11.0"],\
@@ -9082,12 +9081,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["supertest", [\
-        ["npm:6.3.3", {\
-          "packageLocation": "./.yarn/cache/supertest-npm-6.3.3-2e2b5bc83a-38239e517f.zip/node_modules/supertest/",\
+        ["npm:7.0.0", {\
+          "packageLocation": "./.yarn/cache/supertest-npm-7.0.0-8060c32e4d-974743aa51.zip/node_modules/supertest/",\
           "packageDependencies": [\
-            ["supertest", "npm:6.3.3"],\
+            ["supertest", "npm:7.0.0"],\
             ["methods", "npm:1.1.2"],\
-            ["superagent", "npm:8.0.9"]\
+            ["superagent", "npm:9.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
