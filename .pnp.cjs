@@ -31,7 +31,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@mikro-orm/cli", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:5.6.16"],\
             ["@mikro-orm/core", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:5.6.16"],\
             ["@mikro-orm/migrations", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:5.6.16"],\
-            ["@mikro-orm/nestjs", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:5.1.8"],\
+            ["@mikro-orm/nestjs", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:6.0.2"],\
             ["@mikro-orm/postgresql", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:5.6.16"],\
             ["@nestjs/cli", "npm:9.3.0"],\
             ["@nestjs/common", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
@@ -1730,17 +1730,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@mikro-orm/nestjs", [\
-        ["npm:5.1.8", {\
-          "packageLocation": "./.yarn/cache/@mikro-orm-nestjs-npm-5.1.8-1d41506bc3-183772d17d.zip/node_modules/@mikro-orm/nestjs/",\
+        ["npm:6.0.2", {\
+          "packageLocation": "./.yarn/cache/@mikro-orm-nestjs-npm-6.0.2-d5ae685408-53ea0b930e.zip/node_modules/@mikro-orm/nestjs/",\
           "packageDependencies": [\
-            ["@mikro-orm/nestjs", "npm:5.1.8"]\
+            ["@mikro-orm/nestjs", "npm:6.0.2"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:5.1.8", {\
-          "packageLocation": "./.yarn/__virtual__/@mikro-orm-nestjs-virtual-09ca15066c/0/cache/@mikro-orm-nestjs-npm-5.1.8-1d41506bc3-183772d17d.zip/node_modules/@mikro-orm/nestjs/",\
+        ["virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:6.0.2", {\
+          "packageLocation": "./.yarn/__virtual__/@mikro-orm-nestjs-virtual-2f41a470bf/0/cache/@mikro-orm-nestjs-npm-6.0.2-d5ae685408-53ea0b930e.zip/node_modules/@mikro-orm/nestjs/",\
           "packageDependencies": [\
-            ["@mikro-orm/nestjs", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:5.1.8"],\
+            ["@mikro-orm/nestjs", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:6.0.2"],\
             ["@mikro-orm/core", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:5.6.16"],\
             ["@nestjs/common", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
             ["@nestjs/core", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
@@ -5650,7 +5650,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@mikro-orm/cli", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:5.6.16"],\
             ["@mikro-orm/core", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:5.6.16"],\
             ["@mikro-orm/migrations", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:5.6.16"],\
-            ["@mikro-orm/nestjs", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:5.1.8"],\
+            ["@mikro-orm/nestjs", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:6.0.2"],\
             ["@mikro-orm/postgresql", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:5.6.16"],\
             ["@nestjs/cli", "npm:9.3.0"],\
             ["@nestjs/common", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
