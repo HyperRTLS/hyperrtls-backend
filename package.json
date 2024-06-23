@@ -32,7 +32,7 @@
     "mqtt": "4.3.7",
     "reflect-metadata": "0.1.13",
     "rxjs": "7.8.0",
-    "uuid": "9.0.0"
+    "uuid": "10.0.0"
   },
   "devDependencies": {
     "@mikro-orm/cli": "5.6.16",
@@ -44,7 +44,7 @@
     "@types/jest": "29.5.0",
     "@types/node": "18.15.11",
     "@types/supertest": "2.0.12",
-    "@types/uuid": "9.0.1",
+    "@types/uuid": "10.0.0",
     "@typescript-eslint/eslint-plugin": "5.58.0",
     "@typescript-eslint/parser": "5.58.0",
     "eslint": "8.38.0",
