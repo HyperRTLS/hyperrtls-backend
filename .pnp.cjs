@@ -40,7 +40,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/platform-express", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
             ["@nestjs/schematics", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.1.0"],\
             ["@nestjs/testing", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
-            ["@types/express", "npm:4.17.17"],\
+            ["@types/express", "npm:5.0.0"],\
             ["@types/jest", "npm:29.5.0"],\
             ["@types/node", "npm:18.15.11"],\
             ["@types/supertest", "npm:2.0.12"],\
@@ -2366,12 +2366,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/express", [\
-        ["npm:4.17.17", {\
-          "packageLocation": "./.yarn/cache/@types-express-npm-4.17.17-46fe8173db-0196dacc27.zip/node_modules/@types/express/",\
+        ["npm:5.0.0", {\
+          "packageLocation": "./.yarn/cache/@types-express-npm-5.0.0-a645691cd5-ef68d8e2b7.zip/node_modules/@types/express/",\
           "packageDependencies": [\
-            ["@types/express", "npm:4.17.17"],\
+            ["@types/express", "npm:5.0.0"],\
             ["@types/body-parser", "npm:1.19.2"],\
-            ["@types/express-serve-static-core", "npm:4.17.33"],\
+            ["@types/express-serve-static-core", "npm:5.0.0"],\
             ["@types/qs", "npm:6.9.7"],\
             ["@types/serve-static", "npm:1.15.0"]\
           ],\
@@ -2379,13 +2379,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/express-serve-static-core", [\
-        ["npm:4.17.33", {\
-          "packageLocation": "./.yarn/cache/@types-express-serve-static-core-npm-4.17.33-0366bd5654-dce580d16b.zip/node_modules/@types/express-serve-static-core/",\
+        ["npm:5.0.0", {\
+          "packageLocation": "./.yarn/cache/@types-express-serve-static-core-npm-5.0.0-d89b918522-d4e2abfc96.zip/node_modules/@types/express-serve-static-core/",\
           "packageDependencies": [\
-            ["@types/express-serve-static-core", "npm:4.17.33"],\
+            ["@types/express-serve-static-core", "npm:5.0.0"],\
             ["@types/node", "npm:18.7.13"],\
             ["@types/qs", "npm:6.9.7"],\
-            ["@types/range-parser", "npm:1.2.4"]\
+            ["@types/range-parser", "npm:1.2.4"],\
+            ["@types/send", "npm:0.17.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2450,6 +2451,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/mime", [\
+        ["npm:1.3.5", {\
+          "packageLocation": "./.yarn/cache/@types-mime-npm-1.3.5-48d28990db-e29a5f9c47.zip/node_modules/@types/mime/",\
+          "packageDependencies": [\
+            ["@types/mime", "npm:1.3.5"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:3.0.1", {\
           "packageLocation": "./.yarn/cache/@types-mime-npm-3.0.1-dec03536dc-4040fac73f.zip/node_modules/@types/mime/",\
           "packageDependencies": [\
@@ -2515,6 +2523,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-semver-npm-7.3.13-56212b60da-00c0724d54.zip/node_modules/@types/semver/",\
           "packageDependencies": [\
             ["@types/semver", "npm:7.3.13"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/send", [\
+        ["npm:0.17.4", {\
+          "packageLocation": "./.yarn/cache/@types-send-npm-0.17.4-9d7c55577f-cf4db48251.zip/node_modules/@types/send/",\
+          "packageDependencies": [\
+            ["@types/send", "npm:0.17.4"],\
+            ["@types/mime", "npm:1.3.5"],\
+            ["@types/node", "npm:18.7.13"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5659,7 +5678,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/platform-express", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
             ["@nestjs/schematics", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.1.0"],\
             ["@nestjs/testing", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
-            ["@types/express", "npm:4.17.17"],\
+            ["@types/express", "npm:5.0.0"],\
             ["@types/jest", "npm:29.5.0"],\
             ["@types/node", "npm:18.15.11"],\
             ["@types/supertest", "npm:2.0.12"],\
