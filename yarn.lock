@@ -1137,27 +1137,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/common@npm:9.4.0":
-  version: 9.4.0
-  resolution: "@nestjs/common@npm:9.4.0"
+"@nestjs/common@npm:10.4.5":
+  version: 10.4.5
+  resolution: "@nestjs/common@npm:10.4.5"
   dependencies:
     iterare: 1.2.1
-    tslib: 2.5.0
+    tslib: 2.7.0
     uid: 2.0.2
   peerDependencies:
-    cache-manager: <=5
     class-transformer: "*"
     class-validator: "*"
-    reflect-metadata: ^0.1.12
+    reflect-metadata: ^0.1.12 || ^0.2.0
     rxjs: ^7.1.0
   peerDependenciesMeta:
-    cache-manager:
-      optional: true
     class-transformer:
       optional: true
     class-validator:
       optional: true
-  checksum: 751fc94111301da047e42f845415b806a393ca4ecadbe6cfcec9cf6bd230bb8be3a159faf574beb1ff98b2a436a432a726ff3dfccff21685f6ce5cb99ed8bb98
+  checksum: 4d98b3f27099ee17dd63fae46eda23980de209c542e72ddc0e626a8f0c3d5c5236c41dc51b421ecb2b0ac1405321689afea16235952b6d41a20aedce14964c47
   languageName: node
   linkType: hard
 
@@ -4249,7 +4246,7 @@ __metadata:
     "@mikro-orm/nestjs": 5.1.8
     "@mikro-orm/postgresql": 5.6.16
     "@nestjs/cli": 9.3.0
-    "@nestjs/common": 9.4.0
+    "@nestjs/common": 10.4.5
     "@nestjs/config": 2.3.1
     "@nestjs/core": 9.4.0
     "@nestjs/platform-express": 9.4.0
@@ -7539,6 +7536,13 @@ __metadata:
   version: 2.5.0
   resolution: "tslib@npm:2.5.0"
   checksum: ae3ed5f9ce29932d049908ebfdf21b3a003a85653a9a140d614da6b767a93ef94f460e52c3d787f0e4f383546981713f165037dc2274df212ea9f8a4541004e1
+  languageName: node
+  linkType: hard
+
+"tslib@npm:2.7.0":
+  version: 2.7.0
+  resolution: "tslib@npm:2.7.0"
+  checksum: 1606d5c89f88d466889def78653f3aab0f88692e80bb2066d090ca6112ae250ec1cfa9dbfaab0d17b60da15a4186e8ec4d893801c67896b277c17374e36e1d28
   languageName: node
   linkType: hard
 
