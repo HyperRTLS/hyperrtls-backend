@@ -23,7 +23,7 @@
     "@mikro-orm/nestjs": "5.1.8",
     "@mikro-orm/postgresql": "5.6.16",
     "@nestjs/common": "9.4.0",
-    "@nestjs/config": "2.3.1",
+    "@nestjs/config": "3.3.0",
     "@nestjs/core": "9.4.0",
     "@nestjs/platform-express": "9.4.0",
     "class-transformer": "npm:@nestjs/class-transformer@0.4.0",
