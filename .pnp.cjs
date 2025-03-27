@@ -43,7 +43,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/express", "npm:4.17.17"],\
             ["@types/jest", "npm:29.5.0"],\
             ["@types/node", "npm:18.15.11"],\
-            ["@types/supertest", "npm:2.0.12"],\
+            ["@types/supertest", "npm:6.0.3"],\
             ["@types/uuid", "npm:9.0.1"],\
             ["@typescript-eslint/eslint-plugin", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:5.58.0"],\
             ["@typescript-eslint/parser", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:5.58.0"],\
@@ -2319,10 +2319,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/cookiejar", [\
-        ["npm:2.1.2", {\
-          "packageLocation": "./.yarn/cache/@types-cookiejar-npm-2.1.2-2588120a7c-f6e1903454.zip/node_modules/@types/cookiejar/",\
+        ["npm:2.1.5", {\
+          "packageLocation": "./.yarn/cache/@types-cookiejar-npm-2.1.5-f36531e52d-04d5990e87.zip/node_modules/@types/cookiejar/",\
           "packageDependencies": [\
-            ["@types/cookiejar", "npm:2.1.2"]\
+            ["@types/cookiejar", "npm:2.1.5"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2449,6 +2449,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/methods", [\
+        ["npm:1.1.4", {\
+          "packageLocation": "./.yarn/cache/@types-methods-npm-1.1.4-8565dc8af4-ad2a717848.zip/node_modules/@types/methods/",\
+          "packageDependencies": [\
+            ["@types/methods", "npm:1.1.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/mime", [\
         ["npm:3.0.1", {\
           "packageLocation": "./.yarn/cache/@types-mime-npm-3.0.1-dec03536dc-4040fac73f.zip/node_modules/@types/mime/",\
@@ -2540,22 +2549,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/superagent", [\
-        ["npm:4.1.15", {\
-          "packageLocation": "./.yarn/cache/@types-superagent-npm-4.1.15-621c984fca-347cd74ef0.zip/node_modules/@types/superagent/",\
+        ["npm:8.1.9", {\
+          "packageLocation": "./.yarn/cache/@types-superagent-npm-8.1.9-673be5c6fd-530d8c2e87.zip/node_modules/@types/superagent/",\
           "packageDependencies": [\
-            ["@types/superagent", "npm:4.1.15"],\
-            ["@types/cookiejar", "npm:2.1.2"],\
-            ["@types/node", "npm:18.7.13"]\
+            ["@types/superagent", "npm:8.1.9"],\
+            ["@types/cookiejar", "npm:2.1.5"],\
+            ["@types/methods", "npm:1.1.4"],\
+            ["@types/node", "npm:18.7.13"],\
+            ["form-data", "npm:4.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@types/supertest", [\
-        ["npm:2.0.12", {\
-          "packageLocation": "./.yarn/cache/@types-supertest-npm-2.0.12-deccb2551b-f0e2b44f86.zip/node_modules/@types/supertest/",\
+        ["npm:6.0.3", {\
+          "packageLocation": "./.yarn/cache/@types-supertest-npm-6.0.3-0d43ae5953-5f75e41906.zip/node_modules/@types/supertest/",\
           "packageDependencies": [\
-            ["@types/supertest", "npm:2.0.12"],\
-            ["@types/superagent", "npm:4.1.15"]\
+            ["@types/supertest", "npm:6.0.3"],\
+            ["@types/methods", "npm:1.1.4"],\
+            ["@types/superagent", "npm:8.1.9"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5662,7 +5674,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/express", "npm:4.17.17"],\
             ["@types/jest", "npm:29.5.0"],\
             ["@types/node", "npm:18.15.11"],\
-            ["@types/supertest", "npm:2.0.12"],\
+            ["@types/supertest", "npm:6.0.3"],\
             ["@types/uuid", "npm:9.0.1"],\
             ["@typescript-eslint/eslint-plugin", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:5.58.0"],\
             ["@typescript-eslint/parser", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:5.58.0"],\
