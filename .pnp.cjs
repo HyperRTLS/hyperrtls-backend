@@ -44,7 +44,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:29.5.0"],\
             ["@types/node", "npm:18.15.11"],\
             ["@types/supertest", "npm:2.0.12"],\
-            ["@types/uuid", "npm:9.0.1"],\
+            ["@types/uuid", "npm:10.0.0"],\
             ["@typescript-eslint/eslint-plugin", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:5.58.0"],\
             ["@typescript-eslint/parser", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:5.58.0"],\
             ["class-transformer", [\
@@ -2561,10 +2561,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/uuid", [\
-        ["npm:9.0.1", {\
-          "packageLocation": "./.yarn/cache/@types-uuid-npm-9.0.1-b44e45eb8a-c472b8a77c.zip/node_modules/@types/uuid/",\
+        ["npm:10.0.0", {\
+          "packageLocation": "./.yarn/cache/@types-uuid-npm-10.0.0-9ac1066765-e3958f8b0f.zip/node_modules/@types/uuid/",\
           "packageDependencies": [\
-            ["@types/uuid", "npm:9.0.1"]\
+            ["@types/uuid", "npm:10.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5663,7 +5663,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:29.5.0"],\
             ["@types/node", "npm:18.15.11"],\
             ["@types/supertest", "npm:2.0.12"],\
-            ["@types/uuid", "npm:9.0.1"],\
+            ["@types/uuid", "npm:10.0.0"],\
             ["@typescript-eslint/eslint-plugin", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:5.58.0"],\
             ["@typescript-eslint/parser", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:5.58.0"],\
             ["class-transformer", [\
