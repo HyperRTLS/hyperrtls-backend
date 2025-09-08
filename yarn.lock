@@ -4281,7 +4281,7 @@ __metadata:
     ts-node: 10.9.1
     tsconfig-paths: 4.2.0
     typescript: 5.0.4
-    uuid: 9.0.0
+    uuid: 12.0.0
     webpack: 5.78.0
   languageName: unknown
   linkType: soft
@@ -7750,6 +7750,15 @@ __metadata:
   version: 1.0.1
   resolution: "utils-merge@npm:1.0.1"
   checksum: c81095493225ecfc28add49c106ca4f09cdf56bc66731aa8dabc2edbbccb1e1bfe2de6a115e5c6a380d3ea166d1636410b62ef216bb07b3feb1cfde1d95d5080
+  languageName: node
+  linkType: hard
+
+"uuid@npm:12.0.0":
+  version: 12.0.0
+  resolution: "uuid@npm:12.0.0"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: 0e0c2d137f61c7a44a9aefcd58e8df3957960ae2899f8dea42d2842304d8c0a42a052fc23240f4bc83fb96403f20af5b3c92b1e4402bb48f708dabee62ecd1a7
   languageName: node
   linkType: hard
 
