@@ -1589,10 +1589,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.15.11":
-  version: 18.15.11
-  resolution: "@types/node@npm:18.15.11"
-  checksum: 977b4ad04708897ff0eb049ecf82246d210939c82461922d20f7d2dcfd81bbc661582ba3af28869210f7e8b1934529dcd46bff7d448551400f9d48b9d3bddec3
+"@types/node@npm:22.18.12":
+  version: 22.18.12
+  resolution: "@types/node@npm:22.18.12"
+  dependencies:
+    undici-types: ~6.21.0
+  checksum: f39098a09dff1df8ca4892ffcf810889b79f31f9585f7a8f27e3d047126cebc9b9fa9954b21215cc45a9793198895e81852067b019d89e03825d4f57310aa3c9
   languageName: node
   linkType: hard
 
@@ -4257,7 +4259,7 @@ __metadata:
     "@nestjs/testing": 9.4.0
     "@types/express": 4.17.17
     "@types/jest": 29.5.0
-    "@types/node": 18.15.11
+    "@types/node": 22.18.12
     "@types/supertest": 2.0.12
     "@types/uuid": 9.0.1
     "@typescript-eslint/eslint-plugin": 5.58.0
@@ -7681,6 +7683,13 @@ __metadata:
     pony-cause: ^2.1.2
     type-fest: ^2.18.0
   checksum: 8b118345cf4a9faedfaf2d169deb9a630ff630719c684070d02d0f55b8eb4b8f4b03648d6ff7ff03de03ce2650f05b7dde88c2b4f564b279af153c92e1739f38
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~6.21.0":
+  version: 6.21.0
+  resolution: "undici-types@npm:6.21.0"
+  checksum: 46331c7d6016bf85b3e8f20c159d62f5ae471aba1eb3dc52fff35a0259d58dcc7d592d4cc4f00c5f9243fa738a11cfa48bd20203040d4a9e6bc25e807fab7ab3
   languageName: node
   linkType: hard
 
