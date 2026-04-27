@@ -973,7 +973,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mikro-orm/core@npm:5.6.16, @mikro-orm/core@npm:~5.6.16":
+"@mikro-orm/core@npm:7.0.12":
+  version: 7.0.12
+  resolution: "@mikro-orm/core@npm:7.0.12"
+  peerDependencies:
+    dataloader: 2.2.3
+  peerDependenciesMeta:
+    dataloader:
+      optional: true
+  checksum: d1968b03283493ba9ad582565a59391cbe87bb2ec08c5cdc72e08cae52e12a10b3d036d7423ed17141d5516fbf8bf4aa9b77be0517cbff02c03c66225791232e
+  languageName: node
+  linkType: hard
+
+"@mikro-orm/core@npm:~5.6.16":
   version: 5.6.16
   resolution: "@mikro-orm/core@npm:5.6.16"
   dependencies:
@@ -4244,7 +4256,7 @@ __metadata:
   resolution: "hyperrtls-backend@workspace:."
   dependencies:
     "@mikro-orm/cli": 5.6.16
-    "@mikro-orm/core": 5.6.16
+    "@mikro-orm/core": 7.0.12
     "@mikro-orm/migrations": 5.6.16
     "@mikro-orm/nestjs": 5.1.8
     "@mikro-orm/postgresql": 5.6.16
