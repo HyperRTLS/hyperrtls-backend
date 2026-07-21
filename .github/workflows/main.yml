@@ -20,11 +20,11 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.7.0
       - name: Setup Node with dependency caching
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v3.9.1
         with:
-          node-version: '16'
+          node-version: '16.20.2'
           cache: 'yarn'
       - name: Install dependencies
         run: yarn --immutable
@@ -45,11 +45,11 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.7.0
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@v2
+        uses: docker/setup-qemu-action@v2.2.0
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
+        uses: docker/setup-buildx-action@v2.10.0
       - name: Log in to the Container registry
         uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
         with:
