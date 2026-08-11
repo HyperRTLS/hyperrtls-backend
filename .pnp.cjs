@@ -40,7 +40,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/platform-express", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
             ["@nestjs/schematics", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.1.0"],\
             ["@nestjs/testing", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
-            ["@types/express", "npm:4.17.17"],\
+            ["@types/express", "npm:5.0.6"],\
             ["@types/jest", "npm:29.5.0"],\
             ["@types/node", "npm:18.15.11"],\
             ["@types/supertest", "npm:2.0.12"],\
@@ -2366,26 +2366,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/express", [\
-        ["npm:4.17.17", {\
-          "packageLocation": "./.yarn/cache/@types-express-npm-4.17.17-46fe8173db-0196dacc27.zip/node_modules/@types/express/",\
+        ["npm:5.0.6", {\
+          "packageLocation": "./.yarn/cache/@types-express-npm-5.0.6-a43836c0f4-da2cc3de1b.zip/node_modules/@types/express/",\
           "packageDependencies": [\
-            ["@types/express", "npm:4.17.17"],\
+            ["@types/express", "npm:5.0.6"],\
             ["@types/body-parser", "npm:1.19.2"],\
-            ["@types/express-serve-static-core", "npm:4.17.33"],\
-            ["@types/qs", "npm:6.9.7"],\
-            ["@types/serve-static", "npm:1.15.0"]\
+            ["@types/express-serve-static-core", "npm:5.1.3"],\
+            ["@types/serve-static", "npm:2.2.0"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@types/express-serve-static-core", [\
-        ["npm:4.17.33", {\
-          "packageLocation": "./.yarn/cache/@types-express-serve-static-core-npm-4.17.33-0366bd5654-dce580d16b.zip/node_modules/@types/express-serve-static-core/",\
+        ["npm:5.1.3", {\
+          "packageLocation": "./.yarn/cache/@types-express-serve-static-core-npm-5.1.3-f3476b51b4-e694f78042.zip/node_modules/@types/express-serve-static-core/",\
           "packageDependencies": [\
-            ["@types/express-serve-static-core", "npm:4.17.33"],\
+            ["@types/express-serve-static-core", "npm:5.1.3"],\
             ["@types/node", "npm:18.7.13"],\
             ["@types/qs", "npm:6.9.7"],\
-            ["@types/range-parser", "npm:1.2.4"]\
+            ["@types/range-parser", "npm:1.2.4"],\
+            ["@types/send", "npm:1.2.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2396,6 +2396,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@types/graceful-fs", "npm:4.1.5"],\
             ["@types/node", "npm:18.7.13"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/http-errors", [\
+        ["npm:2.0.5", {\
+          "packageLocation": "./.yarn/cache/@types-http-errors-npm-2.0.5-fc57abf6db-a88da66936.zip/node_modules/@types/http-errors/",\
+          "packageDependencies": [\
+            ["@types/http-errors", "npm:2.0.5"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2445,15 +2454,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-json-schema-npm-7.0.11-79462ae5ca-527bddfe62.zip/node_modules/@types/json-schema/",\
           "packageDependencies": [\
             ["@types/json-schema", "npm:7.0.11"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@types/mime", [\
-        ["npm:3.0.1", {\
-          "packageLocation": "./.yarn/cache/@types-mime-npm-3.0.1-dec03536dc-4040fac73f.zip/node_modules/@types/mime/",\
-          "packageDependencies": [\
-            ["@types/mime", "npm:3.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2519,12 +2519,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@types/serve-static", [\
-        ["npm:1.15.0", {\
-          "packageLocation": "./.yarn/cache/@types-serve-static-npm-1.15.0-ec80a4ac87-b6ac93d471.zip/node_modules/@types/serve-static/",\
+      ["@types/send", [\
+        ["npm:1.2.1", {\
+          "packageLocation": "./.yarn/cache/@types-send-npm-1.2.1-64553bf549-3b8388edee.zip/node_modules/@types/send/",\
           "packageDependencies": [\
-            ["@types/serve-static", "npm:1.15.0"],\
-            ["@types/mime", "npm:3.0.1"],\
+            ["@types/send", "npm:1.2.1"],\
+            ["@types/node", "npm:18.7.13"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/serve-static", [\
+        ["npm:2.2.0", {\
+          "packageLocation": "./.yarn/cache/@types-serve-static-npm-2.2.0-5b97070e23-0ad152ae28.zip/node_modules/@types/serve-static/",\
+          "packageDependencies": [\
+            ["@types/serve-static", "npm:2.2.0"],\
+            ["@types/http-errors", "npm:2.0.5"],\
             ["@types/node", "npm:18.7.13"]\
           ],\
           "linkType": "HARD"\
@@ -5659,7 +5669,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/platform-express", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
             ["@nestjs/schematics", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.1.0"],\
             ["@nestjs/testing", "virtual:d1c3c8eab72c87c67a2769d149f963a6578104a29e4414a06994e32d37233b8795a8b3b2e77ac72ea9023d6445c1ae62500fde7ae1c99dce68ec4622a8fb334e#npm:9.4.0"],\
-            ["@types/express", "npm:4.17.17"],\
+            ["@types/express", "npm:5.0.6"],\
             ["@types/jest", "npm:29.5.0"],\
             ["@types/node", "npm:18.15.11"],\
             ["@types/supertest", "npm:2.0.12"],\
