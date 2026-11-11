@@ -1,4 +1,4 @@
-FROM node:lts-alpine@sha256:47d97b93629d9461d64197773966cc49081cf4463b1b07de5a38b6bd5acfbe9d as builder
+FROM node:lts-alpine@sha256:6bd9ab43c0ec0190ca7b2d193906cb8b7edf6e7f4afa43ddeccd6452710bffb5 as builder
 
 ENV NODE_ENV build
 
@@ -8,7 +8,7 @@ WORKDIR /home/node
 COPY --chown=node:node . .
 RUN yarn && yarn build
 
-FROM node:lts-alpine@sha256:47d97b93629d9461d64197773966cc49081cf4463b1b07de5a38b6bd5acfbe9d as runner
+FROM node:lts-alpine@sha256:6bd9ab43c0ec0190ca7b2d193906cb8b7edf6e7f4afa43ddeccd6452710bffb5 as runner
 
 EXPOSE 3000
 
